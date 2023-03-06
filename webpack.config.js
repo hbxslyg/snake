@@ -15,4 +15,8 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
+
+  // 开发模式使用，方便查错误
+  devtool: "inline-source-map",
+
 };
