@@ -4,6 +4,7 @@
   "description": "贪吃蛇",
   "main": "index.js",
   "scripts": {
+    "start": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -11,5 +12,9 @@
     "贪吃蛇"
   ],
   "author": "Dark Lee",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
 }
