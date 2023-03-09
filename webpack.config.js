@@ -9,7 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   mode: "development",
-  target: ['web', 'es5'],
+  target: ["web", "es5"],
   module: {
     rules: [
       {
@@ -18,7 +18,14 @@ module.exports = {
           "ts-loader"
         ],
         exclude: /node_modules/
-      }
+      },
+      {
+        test: /\.css|\.less$/i,
+        use: [
+          "style-loader", 
+          "css-loader", 
+          "less-loader"],
+      },
     ]
   },
   plugins: [
@@ -28,8 +35,8 @@ module.exports = {
     }),
   ],
   resolve: {
-		extensions: ['.ts', '.js']
-	},
+    extensions: [".ts", ".js"],
+  },
 
   // 开发模式使用，方便查错误
   devtool: "inline-source-map",
